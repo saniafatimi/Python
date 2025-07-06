@@ -1,0 +1,17 @@
+'''
+Write a python code such that splits into n/2 pairs, such that sum of integers in each pair is odd. n is even and every element must be present in exactly 1 pair
+'''
+
+print("function")
+def solution(A):
+    
+    if len(A) % 2 != 0:
+        return "Array length must be even."
+    odds = [x for x in A if x % 2 != 0]
+    evens = [x for x in A if x % 2 == 0]
+    pairs = list(zip(odds, evens))  # Pair one odd with one even
+    return pairs
+
+    
+A = [2, 7, 4, 6, 3, 1]
+print(solution(A)) 
